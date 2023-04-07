@@ -1,0 +1,15 @@
+$background-color: #fff;
+
+.container{
+    background-color: $background-color;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-codeleap{
+        width: 40vw;
+        height: 25vh;
+}
