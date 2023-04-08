@@ -1,0 +1,58 @@
+.container-box {
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  width: 40vw;
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+.container-box h1 {
+  margin: 5px;
+  font-size: 22px;
+}
+
+.label-box {
+  margin: 5px;
+}
+
+.button-box-post {
+  height: 5vh;
+  width: 9vw;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-self: flex-end;
+  background-color: #7695ec;
+  color: #fff;
+  border: none;
+  margin: 10px;
+}
+.button-box-post:hover {
+  cursor: pointer;
+}
+
+.container-box input {
+  height: 2vh;
+  border-radius: 8px;
+  border: solid 1px #777777;
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: #777777;
+  font-weight: 400;
+}
+
+.container-box textarea {
+  height: 10vh;
+  border-radius: 8px;
+  border: solid 1px #777777;
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: #777777;
+  font-weight: 400;
+}/*# sourceMappingURL=box-created-post.css.map */
