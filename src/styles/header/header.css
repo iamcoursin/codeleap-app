@@ -1,0 +1,16 @@
+.container-header {
+  background-color: #7695EC;
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  color: #fff;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  padding: 20px;
+}
+
+.container-header h1 {
+  font-weight: 500;
+  margin: 40px;
+}/*# sourceMappingURL=header.css.map */
