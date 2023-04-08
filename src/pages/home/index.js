@@ -1,10 +1,9 @@
 import React from "react";
 
 export const Home = () => {
-
   return (
-    <div className="container">
-        <h1>Heloow mundo!</h1>
+    <div>
+      <h1>Hrllow, seja bem-vindo!</h1>
     </div>
   );
-};
+}
