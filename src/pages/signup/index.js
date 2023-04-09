@@ -7,7 +7,8 @@ import { api } from "../../services/api/api";
 
 export const SignUp = () => {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState([]);
+  const [userName, setUserName] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     await api
@@ -25,7 +26,7 @@ export const SignUp = () => {
         }
       )
       .then((res) =>{
-
+        localStorage.setItem('user', JSON.stringify(res.data))
         console.log(res.data)
         if(res.status===201){
           navigate("/home");
