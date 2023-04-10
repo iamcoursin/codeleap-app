@@ -1,20 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { Post } from "../../components/post";
 import { api } from "../../services/api/api";
+import "../../styles/teste.css";
 
 export const Teste = () => {
-  const [posts, setPosts] = useState({
-    username: "bryan",
-    title: "El Teste",
-    content:
-      "Curabitur suscipit suscipit tellus. Phasellus consectetuer vestibulum elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas egestas arcu quis ligula mattis placerat. Duis vel nibh at velit scelerisque suscipit.",
-  });
+  const [posts, setPosts] = useState([]);
 
-  useEffect(() => {}, []);
+  const getPosts = async () =>{
+        const res = await api.get()
+        const data = await res.data.results;
+        console.log(data)
+        setPosts(data);
+  }
+
+  useEffect((
+    
+  ) => {getPosts()}, []);
 
   return (
-    <div>
-      <Post post={posts} />
+    <div className="container-teste" >
+    {posts && 
+        posts.map((post, index) => {
+        return <Post key={index} post={post}/>;
+      })}
     </div>
   );
 };

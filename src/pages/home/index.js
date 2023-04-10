@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Box } from "../../components/box";
 import "../../styles/home/home.css";
+import { PostList } from "../../components/post-list";
 
 export const Home = () => {
+  const [ feed, setFeed ] = useState([])
+  useEffect(() => { 
+    
+    
+  }, [])
+  
   return (
     <div className="container-home">
       <Header />
@@ -11,6 +18,7 @@ export const Home = () => {
         welcome, it's good to have you here with us
       </h1>
       <Box />
+      <PostList />
     </div>
   );
 };

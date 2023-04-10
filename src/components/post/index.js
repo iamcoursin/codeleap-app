@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare,  faTrashCan } from '@fortawesome/free-regular-svg-icons'
 
 export const Post = ({ post }) => {
+  
   return (
     <div className="container-post">
       <div className="header-post">

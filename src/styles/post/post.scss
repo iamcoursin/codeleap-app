@@ -9,6 +9,7 @@ $background-header-post: #7695ec;
   border: 1px solid #999999;
   border-radius: 16px;
   margin: 20px;
+  font-size: 24px;
 }
 
 .header-post {
@@ -21,9 +22,11 @@ $background-header-post: #7695ec;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  
+  word-wrap: break-word;
   .icon {
     font-size: 24px;
-    // margin: 20px;
+
     &:hover {
       cursor: pointer;
     }
@@ -39,6 +42,7 @@ $background-header-post: #7695ec;
 }
 .post-title {
   font-size: 24px;
+  word-wrap: break-word;
 }
 .post-username {
   margin-bottom: 20px;
