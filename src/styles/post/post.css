@@ -1,8 +1,8 @@
 .container-post {
   display: flex;
   flex-direction: column;
-  height: 45vh;
-  width: 40vw;
+  height: 35vh;
+  width: 45vw;
   background-color: #fff;
   border: 1px solid #999999;
   border-radius: 16px;
