@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/splath/splath.css";
 
 export const Splath = () => {
   const navigate = useNavigate();
-  const goToSignUp = setTimeout(() => {
+  const goToSignUp = () => {
     return navigate("/signup");
-  }, 10000);
-
+  };
+  useEffect(() => {
+    setTimeout(() => {
+      goToSignUp();
+    }, 5000);
+  })
+  
   return (
     <div className="container">
       <img

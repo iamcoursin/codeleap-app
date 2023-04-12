@@ -6,18 +6,13 @@ import { PostList } from "../../components/post-list";
 
 export const Home = () => {
   const [ feed, setFeed ] = useState([])
-  useEffect(() => { 
-    
-    
-  }, [])
-  
   return (
     <div className="container-home">
       <Header />
       <h1 className="title-home">
         welcome, it's good to have you here with us
       </h1>
-      <Box />
+      <Box  />
       <PostList />
     </div>
   );

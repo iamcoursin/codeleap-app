@@ -4,8 +4,8 @@ import { api } from "../../services/api/api";
 import "../../styles/box-created-post/box-created-post.css";
 
 export const Box = () => {
-  const [title, setTitle] = useState();
-  const [content, setContent] = useState();
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
   const user = JSON.parse(localStorage.getItem("user"));
   const handlePost = async (e) => {
     e.preventDefault();

@@ -45,7 +45,7 @@
   border-radius: 8px;
   font-weight: 700;
   color: #fff;
-  border: 2px solid #000;
+  order: 2px solid #000;
 }
 .modal-remove-container .container-btn .delete-btn:hover {
   cursor: pointer;
