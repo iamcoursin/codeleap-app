@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { SignUp } from "../../pages/signup";
-import { Splath } from "../../pages/splath";
-import { Teste } from "../../pages/teste";
-import { Home } from "../../pages/home";
+import { SignUp } from "../pages/signup";
+import { Splath } from "../pages/splath";
+import { Teste } from "../pages/teste";
+import { Home } from "../pages/home";
 
 export const MainRouter = () => {
   return (

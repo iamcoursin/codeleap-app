@@ -1,5 +1,5 @@
 import '../src/styles/global/app.css';
-import { MainRouter } from './store/routes/routes';
+import { MainRouter } from './routes/routes';
 
 function App() {
   return (
