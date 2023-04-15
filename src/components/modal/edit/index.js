@@ -1,15 +1,24 @@
 import React, { useState } from "react";
 import { Button } from "../../button";
 import "../../../styles/modals/edit/edit.css";
+import { useDispatch } from "react-redux";
+import { editPosts } from "../../../actions/feed/actions";
 
-export const ModalEdit = ({ isOpen, setModalOpen, handleSave, title, setTitle, content, setContent }) => {
+export const ModalEdit = ({ isOpen, id, handleCancel }) => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const dispatch = useDispatch();
+  const handleEdit = () => {
+    dispatch(editPosts(id, content, title));
+    handleCancel();
+  };
 
   if (isOpen) {
     return (
       <div className="background-modal">
         <div className="modal-edit-container">
           <form>
-            <h1>Edit item</h1>
+            <h1>Edit item: {id}</h1>
             <label className="label-box" htmlFor="title">
               Title
             </label>
@@ -31,11 +40,11 @@ export const ModalEdit = ({ isOpen, setModalOpen, handleSave, title, setTitle, c
 
             <div className="container-btn">
               <Button
-                handleClick={setModalOpen}
+                handleClick={handleCancel}
                 name="close-btn"
                 label="Cancel"
               />
-              <Button type='submit' handleClick={handleSave} name="save-btn" label="Save" />
+              <Button handleClick={handleEdit} name="save-btn" label="Save" />
             </div>
           </form>
         </div>

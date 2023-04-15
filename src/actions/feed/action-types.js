@@ -1,8 +1,8 @@
 const FeedActionTypes = {
-        GET: "post/get",
-        POST: "post/post",
-        EDIT: "post/edit",
-        DELETE: "post/delete",
+        GET: "feed/get",
+        POST: "feed/post",
+        EDIT: "feed/edit",
+        DELETE: "feed/delete",
         ERROR: "error",
  }
  

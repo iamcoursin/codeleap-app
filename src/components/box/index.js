@@ -9,6 +9,7 @@ export const Box = () => {
   const [content, setContent] = useState('');
   const { user } = useSelector(rootReducer => rootReducer.userReducer)
   const { posts } = useSelector((rootReducer) => rootReducer.feedReducer);
+  const  [ isDisable, setIsDisable  ]= useState(true);
   const dispatch = useDispatch();
   const handlePost = (e) => {
     e.preventDefault();

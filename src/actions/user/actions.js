@@ -9,5 +9,9 @@ export const loginUser = (userName) => ({
 });
 export const logoutUser = () => ({
   type: UserActionTypes.LOGOUT,
+  payload: {
+    username: '', 
+    isLogged: false
+}
 });
 
