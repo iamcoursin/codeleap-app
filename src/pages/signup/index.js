@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../styles/signup/signup.css";
 import { Button } from "../../components/button";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginUser, logoutUser } from "../../actions/user/actions";
 
 export const SignUp = () => {
