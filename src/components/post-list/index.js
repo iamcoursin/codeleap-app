@@ -10,7 +10,7 @@ export const PostList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
-  }, [posts]);
+  }, [dispatch, posts]);
   return (
     <div className="container-posts-list">
            {posts &&

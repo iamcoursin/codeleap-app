@@ -1,37 +1,53 @@
+/* eslint-disable no-lone-blocks */
 import React, { useEffect, useState } from "react";
 import "../../styles/signup/signup.css";
 import { Button } from "../../components/button";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { loginUser, logoutUser } from "../../actions/user/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../actions/user/actions";
 
 export const SignUp = () => {
-  const navigate = useNavigate();
   const [userName, setUserName] = useState("");
+  const { user } = useSelector((rootReducer) => rootReducer.userReducer);
+  const isLogged = user.isLogged;
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(loginUser(userName));
     navigate("/home");
   };
+  useEffect(() => {
+    function userIslogged(isLogged) {
+      if (isLogged) {
+        console.log(isLogged);
+        return navigate("/home");
+      }
+      return null;
+    }
+    userIslogged(isLogged);
+  }, [isLogged, navigate]);
 
   return (
-    <div className="container-signup">
-      <div></div>
-      <form onSubmit={handleLogin}>
-        <div className="box">
-          <h1 className="title">Welcome to CodeLeap network!</h1>
-          <label className="label-form" htmlFor="username">
-            Please enter your username
-          </label>
-          <input
-            value={userName}
-            type="text"
-            onChange={(e) => setUserName(e.target.value)}
-          />
-          <Button name="button-signup" label="ENTER" type="submit" />
+    <>
+      {isLogged ? null : (
+        <div className="container-signup">
+          <form onSubmit={handleLogin}>
+            <div className="box">
+              <h1 className="title">Welcome to CodeLeap network!</h1>
+              <label className="label-form" htmlFor="username">
+                Please enter your username
+              </label>
+              <input
+                value={userName}
+                type="text"
+                onChange={(e) => setUserName(e.target.value)}
+              />
+              <Button name="button-signup" label="ENTER" type="submit" />
+            </div>
+          </form>
         </div>
-      </form>
-    </div>
+      )}
+    </>
   );
 };
