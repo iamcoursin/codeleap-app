@@ -1,22 +1,27 @@
 import React from "react";
 import "../../../styles/modals/delete/delete.css";
 import { Button } from "../../button";
+import { deletePosts } from "../../../actions/feed/actions";
+import { useDispatch } from "react-redux";
 
-export const ModalRemove = ({ isOpen, setModalOpen, handleRemove }) => {
+export const ModalRemove = ({ isOpen, id, handleCancel }) => {
+  const dispatch = useDispatch();
+  const handleDelete = () => {
+    dispatch(deletePosts(id));
+  };
   if (isOpen) {
     return (
       <div className="background-modal">
         <div className="modal-remove-container">
           <h1>Are you sure you want to delete this item?</h1>
-
           <div className="container-btn">
             <Button
-              handleClick={setModalOpen}
+              handleClick={handleCancel}
               name="close-btn"
               label="Cancel"
             />
             <Button
-              handleClick={handleRemove}
+              handleClick={handleDelete}
               name="delete-btn"
               label="Delete"
             />

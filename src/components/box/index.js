@@ -5,16 +5,20 @@ import { useSelector, useDispatch } from "react-redux";
 import { addPosts } from "../../actions/feed/actions";
 
 export const Box = () => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
-  const { user } = useSelector(rootReducer => rootReducer.userReducer)
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const { user } = useSelector((rootReducer) => rootReducer.userReducer);
   const { posts } = useSelector((rootReducer) => rootReducer.feedReducer);
-  const  [ isDisable, setIsDisable  ]= useState(true);
+
+  //linha abaixo feita para desabilitar um bottom
+  const [isDisable, setIsDisable] = useState(true);
   const dispatch = useDispatch();
   const handlePost = (e) => {
     e.preventDefault();
     const username = user.username;
-    dispatch(addPosts(username, title, content))
+    dispatch(addPosts(username, title, content));
+    setContent("");
+    setTitle("");
   };
 
   return (

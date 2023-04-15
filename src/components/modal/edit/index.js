@@ -11,6 +11,8 @@ export const ModalEdit = ({ isOpen, id, handleCancel }) => {
   const handleEdit = () => {
     dispatch(editPosts(id, content, title));
     handleCancel();
+    setContent("");
+    setTitle("");
   };
 
   if (isOpen) {
