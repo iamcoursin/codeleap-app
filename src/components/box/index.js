@@ -8,7 +8,6 @@ export const Box = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const { user } = useSelector((rootReducer) => rootReducer.userReducer);
-  const { posts } = useSelector((rootReducer) => rootReducer.feedReducer);
 
   //linha abaixo feita para desabilitar um bottom
   const [isDisable, setIsDisable] = useState(true);

@@ -1,20 +1,28 @@
-$background-header:  #7695EC;
+$background-header: #7695ec;
 
+.container-header {
+  background-color: $background-header;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  color: #fff;
+  flex-direction: row;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
 
-.container-header{
-    background-color: $background-header;
-    height: 6vh;
-    width: 100vw;
-    display: flex;
-    color: #fff;
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-    padding: 20px;
-  
 }
 
-.container-header h1{
-    font-weight: 500;
-    margin: 40px;
+.container-header h1 {
+  font-weight: 500;
+  margin: 40px;
+}
+.logout-header {
+  font-size: 30px;
+  margin: 20px;
+
+  &:hover {
+    cursor: pointer;
+    color: #ddd;
+  }
 }

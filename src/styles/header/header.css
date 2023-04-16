@@ -1,16 +1,25 @@
 .container-header {
-  background-color: #7695EC;
-  height: 6vh;
-  width: 100vw;
+  background-color: #7695ec;
+  height: 10vh;
+  width: 100%;
   display: flex;
   color: #fff;
   flex-direction: row;
   text-align: left;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
 }
 
 .container-header h1 {
   font-weight: 500;
   margin: 40px;
+}
+
+.logout-header {
+  font-size: 30px;
+  margin: 20px;
+}
+.logout-header:hover {
+  cursor: pointer;
+  color: #ddd;
 }
