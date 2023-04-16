@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../button";
 import "../../styles/box-created-post/box-created-post.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -8,9 +8,7 @@ export const Box = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const { user } = useSelector((rootReducer) => rootReducer.userReducer);
-
-  //linha abaixo feita para desabilitar um bottom
-  const [isDisable, setIsDisable] = useState(true);
+  const [isDisable, setIsDisable] = useState(false);
   const dispatch = useDispatch();
   const handlePost = (e) => {
     e.preventDefault();
@@ -19,6 +17,18 @@ export const Box = () => {
     setContent("");
     setTitle("");
   };
+
+  useEffect(() => {
+    const buttonIsDisable = () => {
+      if (title === "" || content === "") {
+        return setIsDisable(true);
+      } else if (title === "" && content === "") {
+        return setIsDisable(true);
+      }
+      return setIsDisable(false);
+    };
+    buttonIsDisable();
+  }, [title, content, isDisable]);
 
   return (
     <form onSubmit={handlePost}>
@@ -42,7 +52,21 @@ export const Box = () => {
           type="text"
           onChange={(e) => setContent(e.target.value)}
         />
-        <Button name="button-box-post" label="Create" type="submit" />
+        {isDisable ? (
+          <Button
+            isDisable={isDisable}
+            name="button-box-post-disable"
+            label="Create"
+            type="submit"
+          />
+        ) : (
+          <Button
+            isDisable={isDisable}
+            name="button-box-post"
+            label="Create"
+            type="submit"
+          />
+        )}
       </div>
     </form>
   );

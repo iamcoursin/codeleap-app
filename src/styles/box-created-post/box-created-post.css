@@ -35,6 +35,22 @@
   cursor: pointer;
 }
 
+.button-box-post-disable {
+  height: 5vh;
+  width: 9vw;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-self: flex-end;
+  background-color: rgba(221, 221, 221, 0.8666666667);
+  color: #fff;
+  border: none;
+  margin: 10px;
+}
+.button-box-post-disable:hover {
+  cursor: not-allowed;
+}
+
 .container-box input {
   height: 2vh;
   border-radius: 8px;

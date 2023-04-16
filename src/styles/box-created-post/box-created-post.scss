@@ -37,6 +37,23 @@ $background-box: #fff;
   }
 }
 
+.button-box-post-disable{
+  height: 5vh;
+  width: 9vw;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  align-self: flex-end;
+  background-color: #dddd;
+  color: #fff;
+  border: none;
+  margin: 10px;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
+
 .container-box input {
   $border: #777777;
   height: 2vh;
