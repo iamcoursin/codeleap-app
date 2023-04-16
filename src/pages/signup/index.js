@@ -1,4 +1,3 @@
-/* eslint-disable no-lone-blocks */
 import React, { useEffect, useState } from "react";
 import "../../styles/signup/signup.css";
 import { Button } from "../../components/button";
@@ -8,6 +7,7 @@ import { loginUser } from "../../actions/user/actions";
 
 export const SignUp = () => {
   const [userName, setUserName] = useState("");
+  const [isDisable, setIsDisable] = useState(false);
   const { user } = useSelector((rootReducer) => rootReducer.userReducer);
   const isLogged = user.isLogged;
   const navigate = useNavigate();
@@ -43,7 +43,21 @@ export const SignUp = () => {
                 type="text"
                 onChange={(e) => setUserName(e.target.value)}
               />
-              <Button name="button-signup" label="ENTER" type="submit" />
+              {userName ? (
+                <Button
+                  isDisable={isDisable}
+                  name="button-signup"
+                  label="ENTER"
+                  type="submit"
+                />
+              ) : (
+                <Button
+                  isDisable={!isDisable}
+                  name="button-signup-disable"
+                  label="ENTER"
+                  type="submit"
+                />
+              )}
             </div>
           </form>
         </div>

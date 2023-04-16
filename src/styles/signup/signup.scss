@@ -59,3 +59,19 @@ $background-box: #fff;
                 
         }
 }
+.button-signup-disable {
+        height: 20vh;
+        display: block;
+        width: 9vw;
+        font-size: 20px;
+        border-radius: 8px;
+        font-weight: 700;
+        align-self: flex-end;
+        background-color:  #ddd;
+        color: #fff;
+        border: none;
+        margin-top: 20px;
+        &:hover{
+                cursor: not-allowed;     
+        }
+}
