@@ -1,5 +1,5 @@
 .container {
-  background-color: #fff;
+  background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   width: 100vw;
   height: 100vh;
   display: flex;
