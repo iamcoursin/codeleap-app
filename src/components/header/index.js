@@ -14,7 +14,7 @@ export const Header = () => {
   }
   return (
     <header className="container-header">
-      <h1 className="title-header">codeleap network</h1>
+      <h1 className="title-header">codeleap-network</h1>
       <FontAwesomeIcon
         onClick={handleLogout}
         className="logout-header"

@@ -1,7 +1,7 @@
-$background-colo: #fff ;
+$background-color: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 
 .container{
-    background-color: $background-color;
+    background: $background-color;
     width: 100vw;
     height:100vh;
     display: flex;
