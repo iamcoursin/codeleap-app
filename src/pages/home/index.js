@@ -12,9 +12,6 @@ export const Home = () => {
   return (
     <div className="container-home">
       <Header />
-      <h1 className="title-home">
-        welcome, {name} it's good to have you here with us
-      </h1>
       <Box />
       <PostList />
     </div>

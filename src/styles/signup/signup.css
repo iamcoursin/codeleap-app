@@ -9,7 +9,6 @@
 }
 
 .box {
-  z-index: 1000;
   display: flex;
   flex-direction: column;
   height: 30vh;
