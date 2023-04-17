@@ -7,8 +7,8 @@ import { Home } from "../pages/home";
 export const MainRouter = () => {
   return (
     <Routes>
-      <Route path="/signup" element={<SignUp />} />
       <Route path="/" element={<Splath />} />
+      <Route path="/signup" element={<SignUp />} />
       <Route path="/home" element={<Home />} />
     </Routes>
   );

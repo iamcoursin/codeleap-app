@@ -32,9 +32,9 @@ export const SignUp = () => {
     <>
       {isLogged ? null : (
         <div className="container-signup">
+          <h1 className="title">Welcome to CodeLeap network!</h1>
           <form onSubmit={handleLogin}>
             <div className="box">
-              <h1 className="title">Welcome to CodeLeap network!</h1>
               <label className="label-form" htmlFor="username">
                 Please enter your username
               </label>
