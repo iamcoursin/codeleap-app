@@ -27,3 +27,6 @@
   cursor: pointer;
   color: #ddd;
 }
+.logout-header:active {
+  filter: brightness(1.5);
+}

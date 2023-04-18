@@ -1,19 +1,20 @@
 .container-post {
   display: flex;
   flex-direction: column;
-  height: 35vh;
-  width: 45vw;
+  height: 45vh;
+  width: 43vw;
   background-color: #fff;
-  border: 1px solid #999999;
   border-radius: 16px;
-  margin: 20px;
+  margin: 35px;
   font-size: 24px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .header-post {
   display: flex;
   color: #fff;
-  background-color: #7695ec;
+  background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   height: 5vh;
   padding: 20px;
   border-radius: 16px 16px 0 0;
@@ -22,32 +23,59 @@
   flex-direction: row;
   word-wrap: break-word;
 }
-.header-post .icon {
+
+.icon-edit {
   font-size: 24px;
 }
-.header-post .icon:hover {
+.icon-edit:hover {
   cursor: pointer;
+  color: #eaff00;
+  filter: brightness(2.5);
+}
+.icon-edit:active {
+  color: #eaff00;
+}
+
+.icon-delete {
+  font-size: 24px;
+}
+.icon-delete:hover {
+  cursor: pointer;
+  color: #ff0000;
+  filter: brightness(2.5);
+}
+.icon-delete:active {
+  color: #ff0000;
 }
 
 .content-container {
   padding: 20px;
   text-align: justify;
   word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .post-content {
-  font-size: 14px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  word-wrap: break-word;
+  text-align: justify;
+  font-weight: 500;
+  color: #000;
+  text-shadow: #fff 0.01em 0.1em 0.1em;
 }
 
 .post-title {
   font-size: 24px;
   word-wrap: break-word;
+  text-shadow: #000 0.01em 0.1em 0.1em;
 }
 
 .post-username {
   margin-bottom: 20px;
   color: #777777;
   font-size: 18px;
+  text-shadow: #ddd 0.01em 0.1em 0.1em;
 }
 
 .buttons-post {

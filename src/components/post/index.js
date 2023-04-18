@@ -3,7 +3,7 @@ import "../../styles/post/post.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { ModalEdit } from "../modal/edit";
-import { ModalRemove } from "../modal/delete";
+import { ModalDelete } from "../modal/delete";
 import { useSelector } from "react-redux";
 
 export const Post = ({ post }) => {
@@ -25,12 +25,12 @@ export const Post = ({ post }) => {
           <div className="buttons-post">
             <FontAwesomeIcon
               onClick={() => setModalDeleteOpen(!modalDeleteOpen)}
-              className="icon"
+              className="icon-delete"
               icon={faTrashCan}
             />
             <FontAwesomeIcon
               onClick={() => setModalEditOpen(!modalEditOpen)}
-              className="icon"
+              className="icon-edit"
               icon={faPenToSquare}
             />
           </div>
@@ -46,7 +46,7 @@ export const Post = ({ post }) => {
           isOpen={modalEditOpen}
           id={post?.id}
         />
-        <ModalRemove
+        <ModalDelete
           id={post?.id}
           isOpen={modalDeleteOpen}
           handleCancel={handleCancelModalDelete}

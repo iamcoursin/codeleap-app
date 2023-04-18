@@ -4,7 +4,7 @@ $background-header: -webkit-linear-gradient(left, #6087f2, #6b59d5);
   background: $background-header;
   // box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2),
-  1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    1px 1px 10px 2px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   border-bottom: 1px solid #000;
   height: 10vh;
@@ -15,7 +15,6 @@ $background-header: -webkit-linear-gradient(left, #6087f2, #6b59d5);
   text-align: left;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .container-header h1 {
@@ -30,5 +29,8 @@ $background-header: -webkit-linear-gradient(left, #6087f2, #6b59d5);
   &:hover {
     cursor: pointer;
     color: #ddd;
+  }
+  &:active {
+    filter: brightness(1.5);
   }
 }

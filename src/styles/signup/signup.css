@@ -31,12 +31,12 @@
 
 .label-form {
   text-shadow: 1px 1px #ddd;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .box input {
-  height: 2vh;
+  height: 4vh;
   border-radius: 8px;
   border: 1.5px solid #777777;
   margin-top: 15px;
@@ -58,14 +58,19 @@
   border: none;
   margin-top: 20px;
   box-sizing: border-box;
+  letter-spacing: 0.08rem;
 }
 .button-signup:hover {
   filter: brightness(1.1);
   cursor: pointer;
 }
+.button-signup:active {
+  background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
 
 .button-signup-disable {
-  height: 20vh;
+  height: 10vh;
   display: block;
   width: 9vw;
   font-size: 20px;
@@ -76,6 +81,7 @@
   color: #fff;
   border: none;
   margin-top: 20px;
+  letter-spacing: 0.08rem;
 }
 .button-signup-disable:hover {
   cursor: not-allowed;

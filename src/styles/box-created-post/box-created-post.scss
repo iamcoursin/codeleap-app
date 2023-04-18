@@ -6,7 +6,7 @@ $background-box: -webkit-linear-gradient(left, #6087f2);
   width: 43vw;
   background: $background-box;
   padding: 20px;
-  // border: 2px solid #000;
+  border: 1px solid #ddd;
   border-radius: 16px;
   margin: 40px;
   box-sizing: border-box;
@@ -37,17 +37,20 @@ $background-box: -webkit-linear-gradient(left, #6087f2);
   color: #fff;
   border: none;
   margin: 10px;
-  transition: 200ms;
+  letter-spacing: 0.08rem;
   &:hover {
     filter: brightness(1.1);
     cursor: pointer;
   }
   &:active {
     background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2),
+      1px 1px 1px 1px rgba(0, 0, 0, 0.2);
   }
 }
 
 .button-box-post-disable {
+  letter-spacing: 0.08rem;
   height: 10vh;
   width: 9vw;
   font-size: 18px;

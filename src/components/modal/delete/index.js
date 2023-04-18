@@ -4,7 +4,7 @@ import { Button } from "../../button";
 import { deletePosts } from "../../../actions/feed/actions";
 import { useDispatch } from "react-redux";
 
-export const ModalRemove = ({ isOpen, id, handleCancel }) => {
+export const ModalDelete = ({ isOpen, id, handleCancel }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deletePosts(id));
@@ -13,11 +13,11 @@ export const ModalRemove = ({ isOpen, id, handleCancel }) => {
     return (
       <div className="background-modal">
         <div className="modal-remove-container">
-          <h1>Are you sure you want to delete this item?</h1>
+          <h1 className="modal-title" >Are you sure you want to delete this item?</h1>
           <div className="container-btn">
             <Button
               handleClick={handleCancel}
-              name="close-btn"
+              name="cancel-btn"
               label="Cancel"
             />
             <Button

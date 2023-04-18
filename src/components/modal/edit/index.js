@@ -19,36 +19,42 @@ export const ModalEdit = ({ isOpen, id, handleCancel }) => {
     return (
       <div className="background-modal">
         <div className="modal-edit-container">
-          <form>
-            <h1>Edit item: {id}</h1>
-            <label className="label-box" htmlFor="title">
-              Title
-            </label>
-            <input
-              placeholder="Hellow world"
-              value={title}
-              type="text"
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <label className="label-box" htmlFor="content">
-              Content
-            </label>
-            <textarea
-              placeholder="Content here..."
-              value={content}
-              type="text"
-              onChange={(e) => setContent(e.target.value)}
-            />
-
-            <div className="container-btn">
-              <Button
-                handleClick={handleCancel}
-                name="close-btn"
-                label="Cancel"
+          <div className="header-modal">
+            <h1 className="edit-title">Edit item: {id}</h1>
+          </div>
+          <div className="content-container">
+            <form>
+              <label className="label-box" htmlFor="title">
+                Title
+              </label>
+              <input
+                placeholder="Hellow world"
+                value={title}
+                type="text"
+                onChange={(e) => setTitle(e.target.value)}
               />
-              <Button handleClick={handleEdit} name="save-btn" label="Save" />
-            </div>
-          </form>
+              <label className="label-box" htmlFor="content">
+                Content
+              </label>
+              <textarea
+                rows="5"
+                maxlength="500"
+                placeholder="Content here..."
+                value={content}
+                type="text"
+                onChange={(e) => setContent(e.target.value)}
+              />
+
+              <div className="container-btn">
+                <Button
+                  handleClick={handleCancel}
+                  name="close-btn"
+                  label="Cancel"
+                />
+                <Button handleClick={handleEdit} name="save-btn" label="Save" />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     );

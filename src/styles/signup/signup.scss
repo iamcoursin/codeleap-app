@@ -1,4 +1,4 @@
-$background-container: -webkit-linear-gradient(left, #7695ec, #6b59d5);;
+$background-container: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 $background-box: #fff;
 .container-signup {
   background: $background-container;
@@ -34,13 +34,13 @@ $background-box: #fff;
 
 .label-form {
   text-shadow: 1px 1px #ddd;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .box input {
   $border: #777777;
-  height: 2vh;
+  height: 4vh;
   border-radius: 8px;
   border: 1.5px solid $border;
   margin-top: 15px;
@@ -61,15 +61,20 @@ $background-box: #fff;
   color: #fff;
   border: none;
   margin-top: 20px;
-  // box-shadow: 5px 4px 8px 6px rgba(0, 0, 0, 0.01), 5px 6px 30px 5px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+  letter-spacing: 0.08rem;
   &:hover {
     filter: brightness(1.1);
     cursor: pointer;
   }
+  &:active {
+    background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2),
+      1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
 }
 .button-signup-disable {
-  height: 20vh;
+  height: 10vh;
   display: block;
   width: 9vw;
   font-size: 20px;
@@ -80,6 +85,7 @@ $background-box: #fff;
   color: #fff;
   border: none;
   margin-top: 20px;
+  letter-spacing: 0.08rem;
   &:hover {
     cursor: not-allowed;
   }

@@ -5,6 +5,7 @@
   width: 43vw;
   background: -webkit-linear-gradient(left, #6087f2);
   padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 16px;
   margin: 40px;
   box-sizing: border-box;
@@ -34,7 +35,7 @@
   color: #fff;
   border: none;
   margin: 10px;
-  transition: 200ms;
+  letter-spacing: 0.08rem;
 }
 .button-box-post:hover {
   filter: brightness(1.1);
@@ -42,9 +43,11 @@
 }
 .button-box-post:active {
   background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .button-box-post-disable {
+  letter-spacing: 0.08rem;
   height: 10vh;
   width: 9vw;
   font-size: 18px;

@@ -47,6 +47,8 @@ export const Box = () => {
           Content
         </label>
         <textarea
+          rows="5"
+          maxlength="500"
           placeholder="Content here..."
           value={content}
           type="text"
@@ -56,14 +58,14 @@ export const Box = () => {
           <Button
             isDisable={isDisable}
             name="button-box-post-disable"
-            label="Create"
+            label="CREATE"
             type="submit"
           />
         ) : (
           <Button
             isDisable={isDisable}
             name="button-box-post"
-            label="Create"
+            label="CREATE"
             type="submit"
           />
         )}
