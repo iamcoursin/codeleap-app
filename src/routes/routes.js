@@ -1,15 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { SignUp } from "../pages/signup";
-import { Splath } from "../pages/splath";
-import { Home } from "../pages/home";
+import { AnimatedRoutes } from "../components/animations/animated-routes";
 
 export const MainRouter = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Splath />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/home" element={<Home />} />
-    </Routes>
-  );
+  return <AnimatedRoutes />;
 };
