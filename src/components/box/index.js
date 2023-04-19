@@ -3,6 +3,7 @@ import { Button } from "../button";
 import "../../styles/box-created-post/box-created-post.css";
 import { useSelector, useDispatch } from "react-redux";
 import { addPosts } from "../../actions/feed/actions";
+import { motion } from "framer-motion";
 
 export const Box = () => {
   const [title, setTitle] = useState("");
@@ -31,7 +32,11 @@ export const Box = () => {
   }, [title, content, isDisable]);
 
   return (
-    <form onSubmit={handlePost}>
+    <motion.form    
+    initial={{ y: -200 }}
+    animate={{ y: 0 }}
+    transition={{ type: "spring", stiffness: 50}}
+     onSubmit={handlePost}>
       <div className="container-box">
         <h1>What's on your mind?</h1>
         <label className="label-box" htmlFor="title">
@@ -70,6 +75,6 @@ export const Box = () => {
           />
         )}
       </div>
-    </form>
+    </motion.form>
   );
 };

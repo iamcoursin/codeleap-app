@@ -3,17 +3,19 @@ import React from "react";
 import { Header } from "../../components/header";
 import { Box } from "../../components/box";
 import { PostList } from "../../components/post-list";
-import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 export const Home = () => {
-  const { user } = useSelector((rootReducer) => rootReducer.userReducer);
-  const name = user.username;
-
   return (
-    <div className="container-home">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container-home"
+    >
       <Header />
       <Box />
       <PostList />
-    </div>
+    </motion.div>
   );
 };

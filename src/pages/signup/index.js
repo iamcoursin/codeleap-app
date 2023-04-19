@@ -4,6 +4,7 @@ import { Button } from "../../components/button";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../actions/user/actions";
+import { motion } from "framer-motion";
 
 export const SignUp = () => {
   const [userName, setUserName] = useState("");
@@ -29,11 +30,30 @@ export const SignUp = () => {
   }, [isLogged, navigate]);
 
   return (
-    <>
+    <motion.div
+      className="container-signup"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       {isLogged ? null : (
-        <div className="container-signup">
-          <h1 className="title">Welcome to CodeLeap network!</h1>
-          <form onSubmit={handleLogin}>
+        <>
+          <motion.h1
+            className="title"
+            initial={{ y: -150 }}
+            animate={{ y: 0 }}
+            exit={{ y: -100 }}
+            transition={{ type: "spring", stiffness: 50 }}
+          >
+            Welcome to CodeLeap network!
+          </motion.h1>
+          <motion.form
+            initial={{ y: 130 }}
+            animate={{ y: 0 }}
+            exit={{ y: 120 }}
+            transition={{ type: "spring", stiffness: 50, velocity: 1 }}
+            onSubmit={handleLogin}
+          >
             <div className="box">
               <label className="label-form" htmlFor="username">
                 Please enter your username
@@ -59,9 +79,9 @@ export const SignUp = () => {
                 />
               )}
             </div>
-          </form>
-        </div>
+          </motion.form>
+        </>
       )}
-    </>
+    </motion.div>
   );
 };

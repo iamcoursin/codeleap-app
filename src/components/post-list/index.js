@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Post } from "../../components/post";
 import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../../actions/feed/actions";
-
+import { motion } from "framer-motion";
 
 export const PostList = () => {
   const { posts } = useSelector((rootReducer) => rootReducer.feedReducer);
@@ -12,11 +12,16 @@ export const PostList = () => {
     dispatch(getPosts());
   }, [dispatch, posts]);
   return (
-    <div className="container-posts-list">
-           {posts &&
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="container-posts-list"
+    >
+      {posts &&
         posts.map((post) => {
           return <Post key={post.id} post={post} />;
         })}
-    </div>
+    </motion.div>
   );
 };

@@ -1,6 +1,8 @@
-$background-box-modal: -webkit-linear-gradient(left, #ffffff, #ffffff);
+$background-box-modal: #ffffff;
 $background-btn-delete: -webkit-linear-gradient(left, #ff0404, #e6122a);
 $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
+$background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
+
 .background-modal {
   position: fixed;
   top: 0;
@@ -13,10 +15,10 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
 
 .modal-remove-container {
   text-align: center;
-  height: 20vh;
+  height: 25vh;
   width: 40vw;
   position: fixed;
-  border-radius: 12px;
+  border-radius: 16px;
   align-items: center;
   justify-content: space-between;
   transform: translate(-50%, -50%);
@@ -24,7 +26,7 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
   left: 50%;
   background: $background-box-modal;
   display: flex;
-  padding: 10px;
+
   flex-direction: column;
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4),
@@ -32,12 +34,21 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
 
   .modal-title {
     font-size: 22px;
-    margin: 10px;
-    color: #000;
     word-wrap: break-word;
-    text-shadow: #fff 0.01em 0.1em 0.1em;
+    text-shadow: #000 0.1em 0.1em 0.1em;
   }
-
+  .header-delete-modal {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    background: $background-header;
+    height: 10vh;
+    justify-content: center;
+    border-radius: 16px 16px 0 0;
+    align-items: center;
+    flex-direction: row;
+    word-wrap: break-word;
+  }
   .container-btn {
     margin: 10px;
     align-self: center;
@@ -57,16 +68,19 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
       border-radius: 8px;
       font-weight: 700;
       color: #fff;
-      border: 2px solid #000;
+      border: 3px solid #000;
       &:hover {
         cursor: pointer;
         filter: brightness(1.1);
       }
+      &:active {
+        background: #20387b;
+      }
     }
     .cancel-btn {
-      background: $background-btn-cancel;
+      background: #fff;
       letter-spacing: 0.08rem;
-      border: 2px solid #000;
+      border: 3px solid #000;
       height: 4vh;
       width: 6vw;
       font-size: 16px;
@@ -75,7 +89,11 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
       color: #000;
       &:hover {
         cursor: pointer;
-        filter: brightness(1.6);
+        filter: brightness(1.2);
+        background: #ddd;
+      }
+      &:active {
+        background: #ddd;
       }
     }
   }

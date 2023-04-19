@@ -10,28 +10,37 @@
 
 .modal-remove-container {
   text-align: center;
-  height: 20vh;
+  height: 25vh;
   width: 40vw;
   position: fixed;
-  border-radius: 12px;
+  border-radius: 16px;
   align-items: center;
   justify-content: space-between;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+  background: #ffffff;
   display: flex;
-  padding: 10px;
   flex-direction: column;
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4), 1px 1px 10px 2px rgba(0, 0, 0, 0.4);
 }
 .modal-remove-container .modal-title {
   font-size: 22px;
-  margin: 10px;
-  color: #000;
   word-wrap: break-word;
-  text-shadow: #fff 0.01em 0.1em 0.1em;
+  text-shadow: #000 0.1em 0.1em 0.1em;
+}
+.modal-remove-container .header-delete-modal {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
+  height: 10vh;
+  justify-content: center;
+  border-radius: 16px 16px 0 0;
+  align-items: center;
+  flex-direction: row;
+  word-wrap: break-word;
 }
 .modal-remove-container .container-btn {
   margin: 10px;
@@ -53,16 +62,19 @@
   border-radius: 8px;
   font-weight: 700;
   color: #fff;
-  border: 2px solid #000;
+  border: 3px solid #000;
 }
 .modal-remove-container .container-btn .delete-btn:hover {
   cursor: pointer;
   filter: brightness(1.1);
 }
+.modal-remove-container .container-btn .delete-btn:active {
+  background: #20387b;
+}
 .modal-remove-container .container-btn .cancel-btn {
-  background: -webkit-linear-gradient(left, #ffffff, #ffffff);
+  background: #fff;
   letter-spacing: 0.08rem;
-  border: 2px solid #000;
+  border: 3px solid #000;
   height: 4vh;
   width: 6vw;
   font-size: 16px;
@@ -72,5 +84,9 @@
 }
 .modal-remove-container .container-btn .cancel-btn:hover {
   cursor: pointer;
-  filter: brightness(1.6);
+  filter: brightness(1.2);
+  background: #ddd;
+}
+.modal-remove-container .container-btn .cancel-btn:active {
+  background: #ddd;
 }

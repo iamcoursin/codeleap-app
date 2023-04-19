@@ -5,6 +5,7 @@ import { faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import { ModalEdit } from "../modal/edit";
 import { ModalDelete } from "../modal/delete";
 import { useSelector } from "react-redux";
+import { motion } from "framer-motion";
 
 export const Post = ({ post }) => {
   const [modalEditOpen, setModalEditOpen] = useState(false);
@@ -18,7 +19,11 @@ export const Post = ({ post }) => {
     setModalDeleteOpen(false);
   };
   return (
-    <div className="container-post">
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="container-post">
       <div className="header-post">
         <h1 className="post-title">{post?.title} </h1>
         {username === post.username ? (
@@ -52,6 +57,6 @@ export const Post = ({ post }) => {
           handleCancel={handleCancelModalDelete}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };

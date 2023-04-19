@@ -1,7 +1,7 @@
 $background-box-modal: -webkit-linear-gradient(left, #fff, #fff);
 $background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
-$background-btn-save: -webkit-linear-gradient(left, #1c8d35, #1ebf41);
-$background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
+$background-btn-save: -webkit-linear-gradient(left, #7695ec, #6b59d5);
+$background-btn-cancel: #ffffff;
 .background-modal {
   position: fixed;
   top: 0;
@@ -68,7 +68,7 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
 .edit-title {
   padding: 25px;
   font-size: 22px;
-  text-shadow: #000 0.1em 0.1em 0.1em;
+  text-shadow: #000 0.01em 0.1em 0.1em;
 }
 
 .header-modal {
@@ -101,21 +101,19 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
     border-radius: 8px;
     font-weight: 700;
     color: #fff;
-    border: 2px solid #000;
+    border: 3px solid #000;
     &:hover {
       cursor: pointer;
       filter: brightness(1.1);
     }
     &:active {
-      background: -webkit-linear-gradient(left, #20387b, #4e35d8);
-      box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4),
-        1px 1px 10px 2px rgba(0, 0, 0, 0.4);
+      background: #20387b;
     }
   }
   .close-btn {
     letter-spacing: 0.08rem;
     background: $background-btn-cancel;
-    border: 2px solid #000;
+    border: 3px solid #000;
     height: 4vh;
     width: 6vw;
     font-size: 16px;
@@ -129,8 +127,6 @@ $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
     &:active {
       background: -webkit-linear-gradient(left, #ff0404, #e6122a);
       color: #fff;
-      box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4),
-        1px 1px 10px 2px rgba(0, 0, 0, 0.4);
     }
   }
 }
