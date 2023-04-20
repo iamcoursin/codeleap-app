@@ -8,12 +8,12 @@ import { Home } from "../../../pages/home";
 export const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Splath />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Splath />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </AnimatePresence>
   );
 };

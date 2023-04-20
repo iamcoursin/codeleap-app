@@ -1,6 +1,6 @@
 .container-header {
   background: -webkit-linear-gradient(left, #6087f2, #6b59d5);
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-bottom: 1px solid #000;
   height: 10vh;
@@ -26,6 +26,7 @@
 .logout-header:hover {
   cursor: pointer;
   color: #ddd;
+  transform: scale(1.1, 1.1);
 }
 .logout-header:active {
   filter: brightness(1.5);

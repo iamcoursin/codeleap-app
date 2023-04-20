@@ -1,14 +1,20 @@
 import React from "react";
-import "../../../styles/modals/delete/delete.css";
 import { Button } from "../../button";
 import { deletePosts } from "../../../actions/feed/actions";
 import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "../../../styles/modals/delete/delete.css";
 
 export const ModalDelete = ({ isOpen, id, handleCancel }) => {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(deletePosts(id));
+    toast.info("deleted post", {
+      position: toast.POSITION.BOTTOM_LEFT,
+      autoClose: 3000,
+    });
   };
   return (
     <>
@@ -38,6 +44,7 @@ export const ModalDelete = ({ isOpen, id, handleCancel }) => {
               />
             </div>
           </div>
+          <ToastContainer />
         </motion.div>
       ) : null}
     </>
