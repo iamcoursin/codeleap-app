@@ -28,6 +28,15 @@ export const SignUp = () => {
     }
     userIslogged(isLogged);
   }, [isLogged, navigate]);
+useEffect (() =>{
+  const buttonIsDisable = () => {
+    if ( userName === "") {
+      return setIsDisable(true);
+    }
+    return setIsDisable(false);
+  };
+  buttonIsDisable();
+}, [ userName, isDisable]);
 
   return (
     <motion.div
