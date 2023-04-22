@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ColorRing } from "react-loader-spinner";
 import { motion } from "framer-motion";
-import { logoUrlBlack } from "../../services/helpers/url-logo";
+import  logo  from "../../assets/logo-black.png";
 import "../../styles/splath/splath.css";
 
 export const Splath = () => {
@@ -25,7 +25,7 @@ export const Splath = () => {
     >
       <motion.img
         className="logo-codeleap"
-        src={logoUrlBlack}
+        src={ logo }
         alt="codeleap-logo"
         initial={{ y: -200 }}
         animate={{ y: 0 }}
