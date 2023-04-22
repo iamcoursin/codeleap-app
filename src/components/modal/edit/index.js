@@ -73,7 +73,7 @@ export const ModalEdit = ({ isOpen, id, handleCancel }) => {
               </form>
             </div>
           </div>
-          <ToastContainer autoClose={100} />
+          <ToastContainer />
         </motion.div>
       ) : null}
     </>
