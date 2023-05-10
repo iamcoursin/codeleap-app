@@ -1,3 +1,4 @@
+@use '../breakpoints';
 $background-color: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 
 .container{
@@ -13,4 +14,26 @@ $background-color: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 .logo-codeleap{
         width: 30vw;
         height: 20vh;
+        @include breakpoints.xs {
+            width: 40vw;
+            height: 15vh;
+        }
+        @include breakpoints.sm {
+            width: 50vw;
+            height: 15vh;
+        }
+        @include breakpoints.md {
+            width: 50vw;
+            height: 15vh;
+        }
+        @include breakpoints.lg {
+            width: 25vw;
+            height: 15vh;
+        }
+        @include breakpoints.xl {
+            width: 25vw;
+            height: 15vh;
+        }
+    
 }
+

@@ -12,3 +12,33 @@
   width: 30vw;
   height: 20vh;
 }
+@media (min-width: 0) {
+  .logo-codeleap {
+    width: 40vw;
+    height: 15vh;
+  }
+}
+@media (min-width: 480px) {
+  .logo-codeleap {
+    width: 50vw;
+    height: 15vh;
+  }
+}
+@media (min-width: 720px) {
+  .logo-codeleap {
+    width: 50vw;
+    height: 15vh;
+  }
+}
+@media (min-width: 960px) {
+  .logo-codeleap {
+    width: 25vw;
+    height: 15vh;
+  }
+}
+@media (min-width: 1200px) {
+  .logo-codeleap {
+    width: 25vw;
+    height: 15vh;
+  }
+}

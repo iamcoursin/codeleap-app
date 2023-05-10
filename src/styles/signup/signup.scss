@@ -1,3 +1,5 @@
+@use '../breakpoints';
+
 $background-container: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 $background-box: #fff;
 .container-signup {
@@ -8,6 +10,7 @@ $background-box: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
+ 
 }
 
 .box {
@@ -39,7 +42,7 @@ $background-box: #fff;
 }
 
 .box input {
-  $border: #777777;
+  $border: #ce2c2c;
   height: 4vh;
   border-radius: 8px;
   border: 1.5px solid $border;
@@ -87,4 +90,24 @@ $background-box: #fff;
   &:hover {
     cursor: not-allowed;
   }
+}
+
+.teste{
+  color: crimson;
+  @include breakpoints.xs {
+      color: #000;
+  }
+  @include breakpoints.sm {
+      color: #6b59d5;
+  }
+  @include breakpoints.md {
+      color: #7695ec;
+  }
+  @include breakpoints.lg {
+      color: chartreuse;
+  }
+  @include breakpoints.xl {
+      color: rgb(74, 135, 13);
+  }
+
 }

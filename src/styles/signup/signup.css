@@ -38,11 +38,11 @@
 .box input {
   height: 4vh;
   border-radius: 8px;
-  border: 1.5px solid #777777;
+  border: 1.5px solid #ce2c2c;
   margin-top: 15px;
   padding: 10px;
   font-size: 15px;
-  color: #777777;
+  color: #ce2c2c;
 }
 
 .button-signup {
@@ -84,4 +84,33 @@
 }
 .button-signup-disable:hover {
   cursor: not-allowed;
+}
+
+.teste {
+  color: crimson;
+}
+@media (min-width: 0) {
+  .teste {
+    color: #000;
+  }
+}
+@media (min-width: 480px) {
+  .teste {
+    color: #6b59d5;
+  }
+}
+@media (min-width: 720px) {
+  .teste {
+    color: #7695ec;
+  }
+}
+@media (min-width: 960px) {
+  .teste {
+    color: chartreuse;
+  }
+}
+@media (min-width: 1200px) {
+  .teste {
+    color: rgb(74, 135, 13);
+  }
 }
