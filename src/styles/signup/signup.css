@@ -11,52 +11,155 @@
 .box {
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  width: 45vw;
+  height: 20vh;
+  width: 20vw;
   background-color: #fff;
-  padding: 35px;
+  padding: 1.5rem;
   border: 1px solid #cccccc;
   border-radius: 16px;
   box-shadow: 5px 4px 20px 6px rgba(0, 0, 0, 0.4), 5px 6px 20px 5px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
 }
+@media (min-width: 0) {
+  .box {
+    width: 90vw;
+    height: 25vh;
+  }
+}
+@media (min-width: 480px) {
+  .box {
+    width: 90vw;
+    height: 25vh;
+  }
+}
+@media (min-width: 720px) {
+  .box {
+    width: 80vw;
+    height: 25vh;
+  }
+}
+@media (min-width: 960px) {
+  .box {
+    width: 70vw;
+    height: 25vh;
+  }
+}
+@media (min-width: 1200px) {
+  .box {
+    width: 60vw;
+    height: 25vh;
+  }
+}
 
 .title {
-  font-size: 35px;
+  font-size: 2rem;
   margin: 25px;
   color: #fff;
   text-shadow: #000 0.1em 0.1em 0.2em;
   font-weight: bolder;
 }
+@media (min-width: 0) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 720px) {
+  .title {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 960px) {
+  .title {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .title {
+    font-size: 2rem;
+  }
+}
 
 .label-form {
   text-shadow: 1px 1px #ddd;
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: bold;
+}
+@media (min-width: 0) {
+  .label-form {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 480px) {
+  .label-form {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 720px) {
+  .label-form {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 960px) {
+  .label-form {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .label-form {
+    font-size: 1.6rem;
+  }
 }
 
 .box input {
-  height: 4vh;
+  height: 6vh;
   border-radius: 8px;
-  border: 1.5px solid #ce2c2c;
-  margin-top: 15px;
-  padding: 10px;
-  font-size: 15px;
-  color: #ce2c2c;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 0) {
+  .box input {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 480px) {
+  .box input {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 720px) {
+  .box input {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 960px) {
+  .box input {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .box input {
+    font-size: 1.4rem;
+  }
 }
 
 .button-signup {
-  height: 10vh;
+  height: 7vh;
+  width: 12vw;
   display: block;
-  width: 9vw;
-  font-size: 20px;
+  font-size: 1.5rem;
   border-radius: 8px;
   font-weight: 700;
   align-self: flex-end;
   background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   color: #fff;
   border: none;
-  margin-top: 20px;
+  margin-top: 1.4rem;
   box-sizing: border-box;
   letter-spacing: 0.08rem;
 }
@@ -66,6 +169,41 @@
 }
 .button-signup:active {
   background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+}
+@media (min-width: 0) {
+  .button-signup {
+    height: 6vh;
+    width: 30vw;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 480px) {
+  .button-signup {
+    height: 6vh;
+    width: 25vw;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 720px) {
+  .button-signup {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 960px) {
+  .button-signup {
+    height: 6vh;
+    width: 15vw;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .button-signup {
+    font-size: 1.2rem;
+    height: 6vh;
+    width: 12vw;
+  }
 }
 
 .button-signup-disable {
@@ -85,32 +223,38 @@
 .button-signup-disable:hover {
   cursor: not-allowed;
 }
-
-.teste {
-  color: crimson;
-}
 @media (min-width: 0) {
-  .teste {
-    color: #000;
+  .button-signup-disable {
+    height: 6vh;
+    width: 30vw;
+    font-size: 1rem;
   }
 }
 @media (min-width: 480px) {
-  .teste {
-    color: #6b59d5;
+  .button-signup-disable {
+    height: 6vh;
+    width: 25vw;
+    font-size: 1rem;
   }
 }
 @media (min-width: 720px) {
-  .teste {
-    color: #7695ec;
+  .button-signup-disable {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 960px) {
-  .teste {
-    color: chartreuse;
+  .button-signup-disable {
+    height: 6vh;
+    width: 15vw;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1200px) {
-  .teste {
-    color: rgb(74, 135, 13);
+  .button-signup-disable {
+    font-size: 1.2rem;
+    height: 6vh;
+    width: 12vw;
   }
 }

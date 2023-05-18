@@ -1,3 +1,5 @@
+@use "../../breakpoints";
+
 $background-box-modal: #ffffff;
 $background-btn-delete: -webkit-linear-gradient(left, #ff0404, #e6122a);
 $background-btn-cancel: -webkit-linear-gradient(left, #ffffff, #ffffff);
@@ -16,7 +18,7 @@ $background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 .modal-remove-container {
   text-align: center;
   height: 25vh;
-  width: 40vw;
+  width: 30vw;
   position: fixed;
   border-radius: 16px;
   align-items: center;
@@ -26,23 +28,56 @@ $background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   left: 50%;
   background: $background-box-modal;
   display: flex;
-
   flex-direction: column;
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.4),
     1px 1px 10px 2px rgba(0, 0, 0, 0.4);
-
+  @include breakpoints.xs {
+    height: 15vh;
+    width: 80vw;
+  }
+  @include breakpoints.sm {
+    height: 15vh;
+    width: 70vw;
+  }
+  @include breakpoints.md {
+    height: 15vh;
+    width: 60vw;
+  }
+  @include breakpoints.lg {
+    height: 15vh;
+    width: 60vw;
+  }
+  @include breakpoints.xl {
+    height: 15vh;
+    width: 40vw;
+  }
   .modal-title {
-    font-size: 22px;
+    font-size: 1rem;
     word-wrap: break-word;
+    padding: 1rem;
     text-shadow: #000 0.1em 0.1em 0.1em;
+    @include breakpoints.xs {
+      font-size: 1rem;
+    }
+    @include breakpoints.sm {
+      font-size: 1.1rem;
+    }
+    @include breakpoints.md {
+      font-size: 1.2rem;
+    }
+    @include breakpoints.lg {
+      font-size: 1.3rem;
+    }
+    @include breakpoints.xl {
+      font-size: 1.4rem;
+    }
   }
   .header-delete-modal {
     width: 100%;
     display: flex;
     color: #fff;
     background: $background-header;
-    height: 10vh;
     justify-content: center;
     border-radius: 16px 16px 0 0;
     align-items: center;
@@ -50,25 +85,49 @@ $background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
     word-wrap: break-word;
   }
   .container-btn {
-    margin: 10px;
+    margin: 0.7rem;
     align-self: center;
-    padding: 10px;
+    padding: 0.8rem;
     display: flex;
-    width: 40%;
+    width: 70%;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-end;
+
     .delete-btn {
       letter-spacing: 0.08rem;
       text-shadow: #ff0404 0.01em 0.1em 0.1em;
       background: $background-btn-delete;
       height: 4vh;
       width: 6vw;
-      font-size: 16px;
+      font-size: 1.5rem;
       border-radius: 8px;
       font-weight: 700;
       color: #fff;
-      border: 3px solid #000;
+      border: 1px solid #000;
+      @include breakpoints.xs {
+        height: 3vh;
+        width: 20vw;
+        font-size: 0.8rem;
+      }
+      @include breakpoints.sm {
+        height: 3vh;
+        width: 15vw;
+        font-size: 0.9rem;
+      }
+      @include breakpoints.md {
+        height: 3vh;
+        width: 12vw;
+        font-size: 0.9rem;
+      }
+      @include breakpoints.lg {
+        height: 3vh;
+        width: 12vw;
+      }
+      @include breakpoints.xl {
+        height: 3vh;
+        width: 8vw;
+      }
       &:hover {
         cursor: pointer;
         filter: brightness(1.1);
@@ -83,10 +142,33 @@ $background-header: -webkit-linear-gradient(left, #7695ec, #6b59d5);
       border: 3px solid #000;
       height: 4vh;
       width: 6vw;
-      font-size: 16px;
+      font-size: 1rem;
       border-radius: 8px;
       font-weight: 700;
       color: #000;
+      @include breakpoints.xs {
+        height: 3vh;
+        width: 20vw;
+        font-size: 0.8rem;
+      }
+      @include breakpoints.sm {
+        height: 3vh;
+        width: 15vw;
+        font-size: 0.9rem;
+      }
+      @include breakpoints.md {
+        height: 3vh;
+        width: 12vw;
+        font-size: 0.9rem;
+      }
+      @include breakpoints.lg {
+        height: 3vh;
+        width: 12vw;
+      }
+      @include breakpoints.xl {
+        height: 3vh;
+        width: 8vw;
+      }
       &:hover {
         cursor: pointer;
         filter: brightness(1.2);

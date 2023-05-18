@@ -16,7 +16,7 @@ export const PostList = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container-posts-list"
+      className="container-post-list"
     >
       {posts &&
         posts.map((post) => {

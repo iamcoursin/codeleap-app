@@ -51,7 +51,7 @@ export const Box = () => {
         </label>
         <input
           placeholder="Hellow world"
-          maxLength="30"
+          maxLength="10"
           value={title}
           type="text"
           onChange={(e) => setTitle(e.target.value)}

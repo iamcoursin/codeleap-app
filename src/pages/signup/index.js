@@ -28,15 +28,15 @@ export const SignUp = () => {
     }
     userIslogged(isLogged);
   }, [isLogged, navigate]);
-useEffect (() =>{
-  const buttonIsDisable = () => {
-    if ( userName === "") {
-      return setIsDisable(true);
-    }
-    return setIsDisable(false);
-  };
-  buttonIsDisable();
-}, [ userName, isDisable]);
+  useEffect(() => {
+    const buttonIsDisable = () => {
+      if (userName === "") {
+        return setIsDisable(true);
+      }
+      return setIsDisable(false);
+    };
+    buttonIsDisable();
+  }, [userName, isDisable]);
 
   return (
     <motion.div
@@ -64,7 +64,6 @@ useEffect (() =>{
             onSubmit={handleLogin}
           >
             <div className="box">
-              <h1 className="teste">Testandooooo</h1>
               <label className="label-form" htmlFor="username">
                 Please enter your username
               </label>

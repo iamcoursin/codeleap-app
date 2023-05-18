@@ -1,42 +1,105 @@
+@use "../breakpoints";
+$color-text: #777777;
+$border: #777777;
 $background-box: -webkit-linear-gradient(left, #6087f2);
 .container-box {
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  width: 43vw;
-  background: $background-box;
+  height: 30vh;
+  width: 35vw;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 16px;
-  margin: 40px;
+  margin: 2rem;
   box-sizing: border-box;
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2),
     1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+  @include breakpoints.xs {
+    height: 40vh;
+    width: 80vw;
+  }
+  @include breakpoints.sm {
+    height: 40vh;
+    width: 70vw;
+  }
+  @include breakpoints.md {
+    height: 40vh;
+    width: 60vw;
+  }
+  @include breakpoints.lg {
+    height: 40vh;
+    width: 60vw;
+  }
+  @include breakpoints.xl {
+    height: 40vh;
+    width: 40vw;
+  }
 }
 
 .container-box h1 {
-  margin: 5px;
-  font-size: 22px;
+  margin: 0.5rem;
+  font-size: 1.8rem;
   text-shadow: 1px 1px #ddd;
+  @include breakpoints.xs {
+    margin: 0.2rem;
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    margin: 0.2rem;
+    font-size: 1.2rem;
+  }
+  @include breakpoints.md {
+    margin: 0.2rem;
+    font-size: 1.4rem;
+  }
+  @include breakpoints.lg {
+    margin: 0.2rem;
+    font-size: 1.6rem;
+  }
+  @include breakpoints.xl {
+    margin: 0.2rem;
+    font-size: 1.8rem;
+  }
 }
 
 .label-box {
-  margin: 5px;
+  margin: 0.2rem;
+  font-size: 1.5rem;
   text-shadow: 1px 1px #ddd;
   font-weight: bold;
+  @include breakpoints.xs {
+    margin: 0.2rem;
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    margin: 0.2rem;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.md {
+    margin: 0.2rem;
+    font-size: 1.2rem;
+  }
+  @include breakpoints.lg {
+    font-size: 1.3rem;
+    margin: 0.2rem;
+  }
+  @include breakpoints.xl {
+    font-size: 1.4rem;
+    margin: 0.2rem;
+  }
 }
 
 .button-box-post {
-  height: 10vh;
+  height: 5vh;
   width: 9vw;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 8px;
   font-weight: 700;
   align-self: flex-end;
   background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   color: #fff;
   border: none;
-  margin: 10px;
+  margin: 0.3rem;
   letter-spacing: 0.08rem;
   &:hover {
     filter: brightness(1.1);
@@ -45,46 +108,114 @@ $background-box: -webkit-linear-gradient(left, #6087f2);
   &:active {
     background: -webkit-linear-gradient(left, #20387b, #4e35d8);
   }
+  @include breakpoints.xs {
+    height: 5vh;
+    width: 30vw;
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    height: 5vh;
+    width: 30vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.md {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.lg {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.xl {
+    height: 7vh;
+    width: 15vw;
+    font-size: 1.2rem;
+  }
 }
 
 .button-box-post-disable {
   letter-spacing: 0.08rem;
   height: 10vh;
   width: 9vw;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 8px;
   font-weight: 700;
   align-self: flex-end;
   background-color: #dddd;
   color: #fff;
   border: none;
-  margin: 10px;
+  margin: 0.3rem;
 
   &:hover {
     cursor: not-allowed;
   }
+  @include breakpoints.xs {
+    height: 5vh;
+    width: 30vw;
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    height: 5vh;
+    width: 30vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.md {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.lg {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.xl {
+    height: 7vh;
+    width: 15vw;
+    font-size: 1.2rem;
+  }
 }
 
 .container-box input {
-  $border: #777777;
-  height: 2vh;
+  outline: none;
+  height: 4vh;
   border-radius: 8px;
   border: solid 1px $border;
-  margin: 10px;
-  padding: 10px;
-  font-size: 15px;
-  color: $border;
+  margin: 0.3rem;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  color: $color-text;
   font-weight: 400;
+  @include breakpoints.xs{
+    height: 4vh;
+    margin: 0.3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  @include breakpoints.sm{
+    height: 4vh;
+    margin: 0.3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  @include breakpoints.md{
+    height: 4vh;
+    margin: 0.3rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 .container-box textarea {
-  $border: #777777;
+  outline: none;
   height: 20vh;
   border-radius: 8px;
   border: solid 1px $border;
-  margin: 10px;
-  padding: 10px;
-  font-size: 15px;
+  margin: 0.3rem;
+  padding: 0.7rem;
+  font-size: 1rem;
   color: $border;
   font-weight: 400;
 }

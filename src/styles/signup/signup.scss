@@ -1,4 +1,4 @@
-@use '../breakpoints';
+@use "../breakpoints";
 
 $background-container: -webkit-linear-gradient(left, #7695ec, #6b59d5);
 $background-box: #fff;
@@ -10,60 +10,121 @@ $background-box: #fff;
   display: flex;
   align-items: center;
   flex-direction: column;
- 
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  height: 30vh;
-  width: 45vw;
+  height: 20vh;
+  width: 20vw;
   background-color: $background-box;
-  padding: 35px;
+  padding: 1.5rem;
   border: 1px solid #cccccc;
   border-radius: 16px;
   box-shadow: 5px 4px 20px 6px rgba(0, 0, 0, 0.4),
     5px 6px 20px 5px rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
+  @include breakpoints.xs {
+    width: 90vw;
+    height: 25vh;
+  }
+  @include breakpoints.sm {
+    width: 90vw;
+    height: 25vh;
+  }
+  @include breakpoints.md {
+    width: 80vw;
+    height: 25vh;
+  }
+  @include breakpoints.lg {
+    width: 70vw;
+    height: 25vh;
+  }
+  @include breakpoints.xl {
+    width: 60vw;
+    height: 25vh;
+  }
 }
 
 .title {
-  font-size: 35px;
+  font-size: 2rem;
   margin: 25px;
   color: #fff;
   text-shadow: #000 0.1em 0.1em 0.2em;
   font-weight: bolder;
+  @include breakpoints.xs {
+    font-size: 1.5rem;
+  }
+  @include breakpoints.sm {
+    font-size: 1.6rem;
+  }
+  @include breakpoints.md {
+    font-size: 1.7rem;
+  }
+  @include breakpoints.lg {
+    font-size: 1.8rem;
+  }
+  @include breakpoints.xl {
+    font-size: 2rem;
+  }
 }
 
 .label-form {
   text-shadow: 1px 1px #ddd;
-  font-size: 20px;
+  font-size: 1.6rem;
   font-weight: bold;
+  @include breakpoints.xs {
+    font-size: 1.3rem;
+  }
+  @include breakpoints.sm {
+    font-size: 1.4rem;
+  }
+  @include breakpoints.md {
+    font-size: 1.4rem;
+  }
+  @include breakpoints.lg {
+    font-size: 1.5rem;
+  }
+  @include breakpoints.xl {
+    font-size: 1.6rem;
+  }
 }
 
 .box input {
-  $border: #ce2c2c;
-  height: 4vh;
+  height: 6vh;
   border-radius: 8px;
-  border: 1.5px solid $border;
-  margin-top: 15px;
-  padding: 10px;
-  font-size: 15px;
-  color: $border;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  @include breakpoints.xs {
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    font-size: 1.1rem;
+  }
+  @include breakpoints.md {
+    font-size: 1.2rem;
+  }
+  @include breakpoints.lg {
+    font-size: 1.3rem;
+  }
+  @include breakpoints.xl {
+    font-size: 1.4rem;
+  }
 }
 
 .button-signup {
-  height: 10vh;
+  height: 7vh;
+  width: 12vw;
   display: block;
-  width: 9vw;
-  font-size: 20px;
+  font-size: 1.5rem;
   border-radius: 8px;
   font-weight: 700;
   align-self: flex-end;
   background: -webkit-linear-gradient(left, #7695ec, #6b59d5);
   color: #fff;
   border: none;
-  margin-top: 20px;
+  margin-top: 1.4rem;
   box-sizing: border-box;
   letter-spacing: 0.08rem;
   &:hover {
@@ -72,6 +133,31 @@ $background-box: #fff;
   }
   &:active {
     background: -webkit-linear-gradient(left, #20387b, #4e35d8);
+  }
+  @include breakpoints.xs {
+    height: 6vh;
+    width: 30vw;
+    font-size: 1rem;
+  }
+  @include breakpoints.sm {
+    height: 6vh;
+    width: 25vw;
+    font-size: 1rem;
+  }
+  @include breakpoints.md {
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
+  }
+  @include breakpoints.lg {
+    height: 6vh;
+    width: 15vw;
+    font-size: 1rem;
+  }
+  @include breakpoints.xl {
+    font-size: 1.2rem;
+    height: 6vh;
+    width: 12vw;
   }
 }
 .button-signup-disable {
@@ -90,24 +176,29 @@ $background-box: #fff;
   &:hover {
     cursor: not-allowed;
   }
-}
-
-.teste{
-  color: crimson;
   @include breakpoints.xs {
-      color: #000;
+    height: 6vh;
+    width: 30vw;
+    font-size: 1rem;
   }
   @include breakpoints.sm {
-      color: #6b59d5;
+    height: 6vh;
+    width: 25vw;
+    font-size: 1rem;
   }
   @include breakpoints.md {
-      color: #7695ec;
+    height: 6vh;
+    width: 20vw;
+    font-size: 1.1rem;
   }
   @include breakpoints.lg {
-      color: chartreuse;
+    height: 6vh;
+    width: 15vw;
+    font-size: 1rem;
   }
   @include breakpoints.xl {
-      color: rgb(74, 135, 13);
+    font-size: 1.2rem;
+    height: 6vh;
+    width: 12vw;
   }
-
 }
